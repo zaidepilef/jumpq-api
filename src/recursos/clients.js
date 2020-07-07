@@ -73,14 +73,18 @@ Clients.post('/', (req, response) => {
         return;
     }
 
-    var query = "INSERT INTO `clients` (`client_id`, `client_name`, `client_lastname`, `client_email`, `cliente_phone`, `rut`) VALUES (NULL, ?, ?, ?, '', '')";
-    MySqlConnection.query(query, [name, lastname, email], (err, rows, fields) => {
+    var query = "INSERT INTO `clients` (`client_id`, `client_name`, `client_lastname`, `client_email`, `client_phone`, `rut`) VALUES (NULL, ?, ?, ?, '', '')";
+    MySqlConnection.query(query, [name, lastname, email], (err, rows) => {
         if (!err) {
-            response.json({ message: "Client Saved", status: "OK" })
+
+            response.json({ message: "Client Saved", status: "OK", client_id:rows.insertId})
         } else {
             response.json({ message: err, status: "ERROR" })
         }
     });
+
+   
+
 });
 
 // PUT update
