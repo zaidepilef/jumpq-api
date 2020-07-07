@@ -1,0 +1,9 @@
+[
+    {
+        "webapi": "JUMPQ",
+        "description": "Saltate la fila, de manera simple, rápida e integrada a su plataforma.",
+        "prologue": "FUNCIONES DE JUMPQ",
+        "readme":"Aviso de Agendamiento por SMS, Whatsapp o Correo. Interfaces con Calendarios y Agendamientos.Visualizador para administrador de gestión de agendamiento de sucursales y agentes. Acceso a información de clientes que han agendado. Validación in-situ de agendamiento en sucursales. Personalización para cada cliente.",
+        "version": "1.0.0"
+    }
+]
