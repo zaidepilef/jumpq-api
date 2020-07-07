@@ -56,7 +56,7 @@ Clients.get('/getClientByEmail/:email', (req, response) => {
 
 // POST
 Clients.post('/', (req, response) => {
-    const { name, lastname, email } = req.body;
+    const { name, lastname, email ,phone,rut} = req.body;
 
     if (!name) {
         response.json({ status: "ERROR", message: "Name is required" })
@@ -73,17 +73,29 @@ Clients.post('/', (req, response) => {
         return;
     }
 
-    var query = "INSERT INTO `clients` (`client_id`, `client_name`, `client_lastname`, `client_email`, `client_phone`, `rut`) VALUES (NULL, ?, ?, ?, '', '')";
-    MySqlConnection.query(query, [name, lastname, email], (err, rows) => {
+    if (!phone) {
+        client._phone = "";
+    }
+
+    if (!rut) {
+        client._rut = "";
+    }
+
+    client._name = name;
+    client._lastname = lastname;
+    client._email = email;
+
+    var query = "INSERT INTO `clients` (`client_name`, `client_lastname`, `client_email`, `client_phone`, `rut`) VALUES ( ?, ?, ?, ?, ?)";
+    MySqlConnection.query(query, [client._name, client._lastname, client._email, client._phone, client._rut], (err, rows) => {
         if (!err) {
 
-            response.json({ message: "Client Saved", status: "OK", client_id:rows.insertId})
+            response.json({ message: "Client Saved", status: "OK", client_id: rows.insertId })
         } else {
             response.json({ message: err, status: "ERROR" })
         }
     });
 
-   
+
 
 });
 
@@ -136,25 +148,6 @@ Clients.put('/:id', (req, response) => {
     });
 });
 
-// DELETE
-Clients.delete('/:id', (req, response) => {
 
-    const { id } = req.params;
-
-    if (!id) {
-        response.json({ status: "ERROR", message: "" })
-        return;
-    }
-    var query = "DELETE FROM `clients` WHERE `client_id` = ?";
-
-    MySqlConnection.query(query, [id], (err, rows, fields) => {
-        if (!err) {
-            response.json({ status: "OK", message: "Client Deleted" })
-        } else {
-            response.json({ status: "ERROR", message: err })
-        }
-    });
-
-});
 
 module.exports = Clients;
