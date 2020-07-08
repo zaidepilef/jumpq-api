@@ -75,10 +75,14 @@ Clients.post('/', (req, response) => {
 
     if (!phone) {
         client._phone = "";
+    }else{
+        client._phone= phone;
     }
 
     if (!rut) {
         client._rut = "";
+    }else{
+        client._rut= rut;
     }
 
     client._name = name;
@@ -88,7 +92,6 @@ Clients.post('/', (req, response) => {
     var query = "INSERT INTO `clients` (`client_name`, `client_lastname`, `client_email`, `client_phone`, `rut`) VALUES ( ?, ?, ?, ?, ?)";
     MySqlConnection.query(query, [client._name, client._lastname, client._email, client._phone, client._rut], (err, rows) => {
         if (!err) {
-
             response.json({ message: "Client Saved", status: "OK", client_id: rows.insertId })
         } else {
             response.json({ message: err, status: "ERROR" })
@@ -127,17 +130,21 @@ Clients.put('/:id', (req, response) => {
 
     if (!phone) {
         client._phone = "";
+    }else{
+        client._phone= phone;
     }
 
     if (!rut) {
         client._rut = "";
+    }else{
+        client._rut= rut;
     }
 
     client._name = name;
     client._lastname = lastname;
     client._email = email;
 
-    var query = "UPDATE `clients` SET `client_name` = ?, `client_lastname` = ?, `client_email` = ?, `cliente_phone` = ?, `rut` = ? WHERE `clients`.`client_id` = ?";
+    var query = "UPDATE `clients` SET `client_name` = ?, `client_lastname` = ?, `client_email` = ?, `client_phone` = ?, `rut` = ? WHERE `clients`.`client_id` = ?";
 
     MySqlConnection.query(query, [client._name, client._lastname, client._email, client._phone, client._rut, id], (err, rows, fields) => {
         if (!err) {
