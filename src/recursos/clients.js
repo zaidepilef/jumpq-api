@@ -102,8 +102,10 @@ Clients.post('/', (req, response) => {
 
 });
 
+
+
 // PUT update
-Clients.put('/:id', (req, response) => {
+Clients.put('/:id',(req, response) => {
 
     const { name, lastname, email, phone, rut } = req.body;
     const { id } = req.params;
