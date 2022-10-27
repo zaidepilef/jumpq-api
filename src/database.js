@@ -4,7 +4,7 @@ const MySqlConnection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'jumpq'
+    database: 'eshop'
 });
 
 MySqlConnection.connect(function (err) {

@@ -1,5 +1,5 @@
 {
-  "name": "jumpq-api",
+  "name": "ticket-master-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.17.1",
     "express-myconnection": "^1.0.4",
     "express-validator": "^6.6.0",
