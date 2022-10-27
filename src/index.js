@@ -2,12 +2,14 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
+require('dotenv').config()
 
 
 /**
  * settings
  */
-app.set('port', process.env.PORT || 3000);
+ const PORT = process.env.PORT || 3000;
+app.set('port', PORT);
 app.set('json spaces', 2);
 
 /**
@@ -31,20 +33,18 @@ app.use(express.json());
 
 /**
  * RUTAS
- * recursos con mnombre de rutas y verbos GET POST PUT UPDATE DELETE
+ * recursos con nombre de rutas y verbos GET POST PUT UPDATE DELETE
  */
-app.use('/api', require('./rutas/_test'));
-
+app.use('/api', require('./routes/index'));
+/*
 app.use('/api/test', require('./rutas/index'));
-
 app.use('/api/clients', require('./recursos/clients'));
 app.use('/api/regions', require('./recursos/regions'));
 app.use('/api/comunas', require('./recursos/comunas'));
 app.use('/api/branchs', require('./recursos/branchs'));
 app.use('/api/companies', require('./recursos/companies'));
-
-
 app.use('/api/branchSettings', require('./recursos/branchSettings'));
+*/
 
 
 
