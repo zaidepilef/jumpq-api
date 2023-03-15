@@ -36,6 +36,8 @@ app.use(express.json());
 app.use('/api', require('./rutas/_test'));
 
 app.use('/api/test', require('./rutas/index'));
+app.use('/api/eventos', require('./recursos/eventos'));
+
 
 app.use('/api/clients', require('./recursos/clients'));
 app.use('/api/regions', require('./recursos/regions'));
