@@ -35,19 +35,16 @@ app.use(express.json());
  * RUTAS
  * recursos con nombre de rutas y verbos GET POST PUT UPDATE DELETE
  */
-app.use('/api', require('./routes/index'));
-/*
-app.use('/api/test', require('./rutas/index'));
+
+app.use('/api/test', require('./routes/index'));
 app.use('/api/eventos', require('./recursos/eventos'));
-
-
 app.use('/api/clients', require('./recursos/clients'));
 app.use('/api/regions', require('./recursos/regions'));
 app.use('/api/comunas', require('./recursos/comunas'));
 app.use('/api/branchs', require('./recursos/branchs'));
 app.use('/api/companies', require('./recursos/companies'));
 app.use('/api/branchSettings', require('./recursos/branchSettings'));
-*/
+
 
 
 
