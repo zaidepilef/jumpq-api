@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-03-2023 a las 20:46:36
+-- Tiempo de generación: 18-03-2023 a las 08:55:17
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -408,6 +408,7 @@ CREATE TABLE `eventos` (
   `id` int(11) NOT NULL,
   `titulo` varchar(128) NOT NULL,
   `descripcion` text DEFAULT NULL,
+  `descripcion_2` text DEFAULT NULL,
   `locacion` int(11) DEFAULT NULL,
   `estado` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -416,14 +417,19 @@ CREATE TABLE `eventos` (
 -- Volcado de datos para la tabla `eventos`
 --
 
-INSERT INTO `eventos` (`id`, `titulo`, `descripcion`, `locacion`, `estado`) VALUES
-(1, 'SABBAT III', 'CONNUCTIONE INCESTA Prods\r\nPresenta \"SABBAT III\"\r\nEste Sábado 27 de Agosto 2022\r\n16:00 Hrs\r\nEntrada General $6.000.-\r\nLugar: Espacio Good / Los Boldos # 78 B\r\nVILLA ALEMANA / QUINTA REGIÓN.\r\n\r\nOrden Presentaciones de las Bandas:\r\n•GOAT INVOKATION (Black/Death Metal Stgo)\r\n•MERCYTHRONE\r\n•AQUER\r\n•OSCULUM INFAME (Black/Death Metal Brasil)\r\n•BUNKER', 1, 'SUSPENDIDO'),
-(2, 'OBITUARY EN VALPARAISO', 'OBITUARY REGRESA A VALPARAISO, CHILE, PARA EL PRÓXIMO 2 DE SEPTIEMBRE 2022 EN EL HUEVO', 1, 'REALIZADO'),
-(3, 'Outlander Fest', 'Fiesta de los emprendedores', 3, 'CREADO'),
-(4, 'Outlander Fest', 'Fiesta de los emprendedores', 3, 'CREADO'),
-(5, 'Outlander Fest', 'Fiesta de los emprendedores', 3, 'CREADO'),
-(6, 'Outlander Fest', 'Fiesta de los emprendedores', 3, 'CREADO'),
-(7, 'Outlander Fest', 'Fiesta de los emprendedores', 3, 'CREADO');
+INSERT INTO `eventos` (`id`, `titulo`, `descripcion`, `descripcion_2`, `locacion`, `estado`) VALUES
+(1, 'SABBAT III', 'CONNUCTIONE INCESTA Prods\r\nPresenta \"SABBAT III\"\r\nEste Sábado 27 de Agosto 2022\r\n16:00 Hrs\r\nEntrada General $6.000.-\r\nLugar: Espacio Good / Los Boldos # 78 B\r\nVILLA ALEMANA / QUINTA REGIÓN.\r\n\r\nOrden Presentaciones de las Bandas:\r\n•GOAT INVOKATION (Black/Death Metal Stgo)\r\n•MERCYTHRONE\r\n•AQUER\r\n•OSCULUM INFAME (Black/Death Metal Brasil)\r\n•BUNKER', NULL, 1, 'SUSPENDIDO'),
+(2, 'OBITUARY EN VALPARAISO', 'OBITUARY REGRESA A VALPARAISO, CHILE, PARA EL PRÓXIMO 2 DE SEPTIEMBRE 2022 EN EL HUEVO', NULL, 1, 'FINALIZADO'),
+(3, 'Outlander Fest', 'Fiesta de los emprendedores', NULL, 3, 'CREADO'),
+(4, 'Outlander Fest', 'Fiesta de los emprendedores', NULL, 3, 'CREADO'),
+(5, 'Outlander Fest', 'Fiesta de los emprendedores', NULL, 3, 'CREADO'),
+(6, 'Outlander Fest', 'Fiesta de los emprendedores', 'Fiesta de los vgnfvgh cghc gfhdfghdthc fgbndftfcgbdt', 3, 'CREADO'),
+(7, 'Curauma Fest', 'Rock y emprendimiento junto al lago\r\nCervecerías artesanales, música en vivo patio de comida y emprendedores.', '¡Rock y emprendimiento junto al lago es un evento que simplemente no puedes perderte! Desde la música en vivo hasta las cervecerías artesanales y los emprendedores locales, este evento es una celebración del espíritu creativo y emprendedor que se respira en la comunidad.\r\n\r\nEl ambiente es simplemente genial, con bandas locales tocando rock y otros géneros musicales que te mantienen emocionado y con ganas de bailar toda la noche. Las cervecerías artesanales ofrecen algunas de las mejores cervezas que he probado, todas elaboradas con los ingredientes más frescos y con pasión por la elaboración artesanal. Cada sorbo es una explosión de sabor que te hace apreciar el arte de la cerveza.\r\n\r\nPero no solo se trata de música y cerveza. Los emprendedores locales también tienen un papel importante en el evento, ofreciendo productos y servicios únicos e innovadores. Desde joyas artesanales hasta ropa y accesorios, hay algo para todos en este evento.\r\n\r\nY si te gusta la comida, entonces estás en el lugar correcto. El patio de comida ofrece una amplia variedad de opciones, desde platos clásicos hasta opciones vegetarianas y veganas. Todos los platillos son preparados con ingredientes frescos y ofrecen una explosión de sabores que seguramente te dejarán satisfecho.\r\n\r\nEn resumen, Rock y emprendimiento junto al lago es una experiencia increíble que combina música en vivo, cervezas artesanales, comida deliciosa y emprendedores locales en un ambiente vibrante y divertido. Si quieres sumergirte en la cultura creativa y emprendedora de la comunidad, este evento es definitivamente para ti. ¡No te lo pierdas!', 3, 'ACTIVO'),
+(8, 'ANTIMATERIA', 'asdasd', 'Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por \'Luxul\', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de \'Bleed\' y \'Mass Suicide\', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!', 5, 'CREADO'),
+(9, 'ANTIMATERIA', 'asdasd', 'Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por \'Luxul\', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de \'Bleed\' y \'Mass Suicide\', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!', 5, 'CREADO'),
+(10, 'ANTIMATERIA', 'El festival Open Air Antimateria Fest es un evento de música que se lleva a cabo al aire libre y que reúne a algunas de las bandas más destacadas de la escena metalera y rockera actual. Este evento es una oportunidad única para los amantes de la música y de los festivales, ya que se celebra en un ambiente completamente diferente a los escenarios habituales.', 'Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por \'Luxul\', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de \'Bleed\' y \'Mass Suicide\', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!', 5, 'CREADO'),
+(11, 'asdasdsd', 'asdasdsd', 'asdasdsd', 0, 'CREADO'),
+(12, 'Fest Fest', 'Fiesta de los emprendedores', 'Fiesta de los emprendedores', 3, 'CREADO');
 
 -- --------------------------------------------------------
 
@@ -470,7 +476,23 @@ CREATE TABLE `locaciones` (
 INSERT INTO `locaciones` (`id`, `nombre`, `comuna`, `direccion`) VALUES
 (1, 'El Huevo', 65, 'Blanco 1386, Valparaíso'),
 (2, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
-(3, 'Trotamundos', 79, 'Aníbal Pinto 879, Quilpué, Valparaiso, Valparaíso');
+(3, 'Trotamundos', 79, 'Aníbal Pinto 879, Quilpué, Valparaiso, Valparaíso'),
+(4, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(5, 'PAseo tranque La Luz', 65, 'Av. Borde Laguna no.10 Curauma, Placilla ,Valparaiso'),
+(6, 'Casa Arebol', 65, 'Av.Los Placeres s/n ,Valparaiso'),
+(7, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(8, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(9, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(10, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(11, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(12, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(13, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(14, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(15, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(16, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(17, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso'),
+(18, 'asfdsdfdfasdf', 12, 'direccion'),
+(19, 'Teatro Municipal de Valparaíso', 65, 'Uruguay 410, Valparaíso');
 
 -- --------------------------------------------------------
 
@@ -677,7 +699,7 @@ ALTER TABLE `comunas`
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `fechas_evento`
@@ -689,7 +711,7 @@ ALTER TABLE `fechas_evento`
 -- AUTO_INCREMENT de la tabla `locaciones`
 --
 ALTER TABLE `locaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
