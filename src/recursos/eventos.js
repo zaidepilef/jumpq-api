@@ -7,22 +7,45 @@ var evento = {
     id: "",
     titulo: "",
     descripcion: "",
+    descripcion_2: "",
     locacion: "",
     estado: ""
 }
 
-// GET
+// GET ALL
 Eventos.get('/', (req, response) => {
-    var query = "SELECT * FROM eventos ORDER BY id DESC";
-    MySqlConnection.query(query, (err, rows, fields) => {
+    const { estado, locacion } = req.query;
+    console.log("estado : ", estado)
+    console.log("locacion : ", locacion)
+
+    //response.status(200).json(request)
+    let sqlwhereString = "";
+    
+    if (estado == undefined || estado == '') {
+        console.log("estado viene vacio o undefined ", estado)
+    }else{
+        console.log("else estado : ", estado)
+    }
+    
+    if (locacion == undefined || locacion == '') {
+        console.log("locacion viene vacio o undefined ", locacion)
+    }else{
+        console.log("else locacion : ", locacion)
+    }
+
+    var sqlSelectString = "SELECT * FROM eventos ORDER BY id DESC";
+
+    MySqlConnection.query(sqlSelectString, (err, rows, fields) => {
         if (!err) {
             response.status(200).json(rows)
         } else {
             response.json(err)
         }
     });
+
 });
 
+// GET BY ID
 Eventos.get('/:id', (req, response) => {
     const { id } = req.params;
     var query = "SELECT * FROM eventos WHERE id = " + id;
@@ -35,37 +58,24 @@ Eventos.get('/:id', (req, response) => {
     });
 });
 
-// POST
+// CREATE new
 Eventos.post('/', (req, response) => {
-    const { titulo, descripcion, locacion ,estado} = req.body;
 
-    if (!titulo) {
-        response.status(400).json({ status: "ERROR", message: "titulo is required" })
-        return;
-    }
+    const {
+        titulo,
+        descripcion,
+        descripcion_2,
+        locacion
+    } = req.body;
 
-    if (!descripcion) {
-        response.status(400).json({ status: "ERROR", message: "descripcion is required" })
-        return;
-    }
+    evento.titulo = titulo ? titulo : response.response.status(400).json({ status: "ERROR", message: "titulo is required" });
+    evento.descripcion = descripcion ? descripcion : response.response.status(400).json({ status: "ERROR", message: "descripcion is required" });;
+    evento.descripcion_2 = descripcion_2 ? descripcion_2 : response.response.status(400).json({ status: "ERROR", message: "descripcion_2 is required" });;
+    evento.locacion = locacion ? locacion : response.response.status(400).json({ status: "ERROR", message: "locacion is required" });
+    evento.estado = "CREADO";
 
-    if (!locacion) {
-        response.status(400).json({ status: "ERROR", message: "locacion is required" })
-        return;
-    }
-
-    if (!estado) {
-        response.status(400).json({ status: "ERROR", message: "estado is required" })
-        return;
-    }
-
-    evento.titulo = titulo;
-    evento.descripcion = descripcion;
-    evento.locacion = locacion;
-    evento.estado = estado;
-
-    var query = "INSERT INTO `eventos` (`titulo`, `descripcion`, `locacion`, `estado`) VALUES ( ?, ?, ?, ?)";
-    MySqlConnection.query(query, [evento.titulo, evento.descripcion, evento.locacion, evento.estado], (err, rows) => {
+    var query = "INSERT INTO `eventos` (`titulo`, `descripcion`, `descripcion_2`,`locacion`, `estado`) VALUES ( ?, ?, ?, ?, ?)";
+    MySqlConnection.query(query, [evento.titulo, evento.descripcion, evento.descripcion_2, evento.locacion, evento.estado], (err, rows) => {
         if (!err) {
             response.status(201).json({ message: "eventos Saved", status: "OK", id: rows.insertId })
         } else {
@@ -74,59 +84,54 @@ Eventos.post('/', (req, response) => {
     });
 });
 
-
-
 // PUT update
-Eventos.put('/:id',(req, response) => {
+Eventos.put('/:id', (req, response) => {
 
-    const { name, lastname, email, phone, rut } = req.body;
     const { id } = req.params;
+    const {
+        titulo,
+        descripcion,
+        descripcion_2,
+        locacion,
+        estado
+    } = req.body;
 
     if (!id) {
-        response.json({ status: "ERROR", message: "" })
+        response.status(400).json({ status: "ERROR", message: "id is required" })
         return;
+    } else {
+        evento.titulo = titulo ? titulo : response.response.status(400).json({ status: "ERROR", message: "titulo is required" });
+        evento.descripcion = descripcion ? descripcion : response.response.status(400).json({ status: "ERROR", message: "descripcion is required" });;
+        evento.descripcion_2 = descripcion_2 ? descripcion_2 : response.response.status(400).json({ status: "ERROR", message: "descripcion_2 is required" });;
+        evento.locacion = locacion ? locacion : response.response.status(400).json({ status: "ERROR", message: "locacion is required" });
+        evento.estado = estado ? estado : response.response.status(400).json({ status: "ERROR", message: "estado is required" });
+
+        var query = "UPDATE `eventos` SET `titulo` = ?, `descripcion` = ?, `descripcion_2` = ?, `locacion` = ?, `estado` = ? WHERE `eventos`.`id` = ?";
+
+        MySqlConnection.query(query, [
+            evento.titulo,
+            evento.descripcion,
+            evento.descripcion_2,
+            evento.locacion,
+            evento.estado,
+            id
+        ], (err, rows, fields) => {
+            if (!err) {
+                response.status(204).json({
+                    status: "OK",
+                    message: "eventos updated"
+                })
+            } else {
+                response.status(500).json({
+                    status: "ERROR",
+                    message: err,
+                })
+            }
+        });
     }
 
-    if (!name) {
-        response.json({ status: "ERROR", message: "Name is required" })
-        return;
-    }
 
-    if (!lastname) {
-        response.json({ status: "ERROR", message: "Lastname is required" })
-        return;
-    }
 
-    if (!email) {
-        response.json({ status: "ERROR", message: "Email is required" })
-        return;
-    }
-
-    if (!phone) {
-        client._phone = "";
-    }else{
-        client._phone= phone;
-    }
-
-    if (!rut) {
-        client._rut = "";
-    }else{
-        client._rut= rut;
-    }
-
-    client._name = name;
-    client._lastname = lastname;
-    client._email = email;
-
-    var query = "UPDATE `clients` SET `client_name` = ?, `client_lastname` = ?, `client_email` = ?, `client_phone` = ?, `rut` = ? WHERE `clients`.`client_id` = ?";
-
-    MySqlConnection.query(query, [client._name, client._lastname, client._email, client._phone, client._rut, id], (err, rows, fields) => {
-        if (!err) {
-            response.json({ status: "OK", message: "Client Updated" })
-        } else {
-            response.json({ status: "ERROR", message: err })
-        }
-    });
 });
 
 
