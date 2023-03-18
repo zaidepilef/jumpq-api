@@ -1,6 +1,7 @@
 const { Router, request } = require('express');
 const MySqlConnection = require('../database');
 const Eventos = Router();
+const sqlConcat = require('sql-concat')
 
 //model
 var evento = {
@@ -15,33 +16,40 @@ var evento = {
 // GET ALL
 Eventos.get('/', (req, response) => {
     const { estado, locacion } = req.query;
-    console.log("estado : ", estado)
-    console.log("locacion : ", locacion)
-
-    //response.status(200).json(request)
-    let sqlwhereString = "";
     
-    if (estado == undefined || estado == '') {
-        console.log("estado viene vacio o undefined ", estado)
-    }else{
-        console.log("else estado : ", estado)
-    }
+    let query = sqlConcat.select('*').from('eventos')
     
-    if (locacion == undefined || locacion == '') {
-        console.log("locacion viene vacio o undefined ", locacion)
-    }else{
-        console.log("else locacion : ", locacion)
+    if (!(estado == undefined || estado == '')) {
+        query = query.where('eventos.estado', estado)
     }
 
+    
+    if (!(locacion == undefined || locacion == '')) {
+        query = query.where('eventos.locacion', locacion)
+    }
+
+    query = query.build()
+
+    MySqlConnection.query(query, (err, rows, fields) => {
+        if (!err) {
+            response.status(200).json(rows)
+        } else {
+            response.status(500).json(err)
+        }
+    });
+
+    /*
+    response.status(200).json(result.values)
     var sqlSelectString = "SELECT * FROM eventos ORDER BY id DESC";
 
-    MySqlConnection.query(sqlSelectString, (err, rows, fields) => {
+    MySqlConnection.query(result.sql, (err, rows, fields) => {
         if (!err) {
             response.status(200).json(rows)
         } else {
             response.json(err)
         }
     });
+    */
 
 });
 
