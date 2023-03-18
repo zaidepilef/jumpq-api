@@ -1,0 +1,1799 @@
+{
+	"info": {
+		"_postman_id": "3183b6f1-ee43-40ad-b1e8-0b7219b5d32f",
+		"name": "passe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4509933"
+	},
+	"item": [
+		{
+			"name": "TEST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/api/test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"test"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "523"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20b-wTcOMY2Kn0O1zQaLKOoHuhrtOG8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 06:58:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"webapi\": \"JUMPQ\",\n        \"description\": \"Saltate la fila, de manera simple, rápida e integrada a su plataforma.\",\n        \"prologue\": \"FUNCIONES DE JUMPQ\",\n        \"readme\": \"Aviso de Agendamiento por SMS, Whatsapp o Correo. Interfaces con Calendarios y Agendamientos.Visualizador para administrador de gestión de agendamiento de sucursales y agentes. Acceso a información de clientes que han agendado. Validación in-situ de agendamiento en sucursales. Personalización para cada cliente.\",\n        \"version\": \"1.0.0\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "EVENTOS GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/eventos?estado=SUSPENDIDO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eventos"
+					],
+					"query": [
+						{
+							"key": "estado",
+							"value": "SUSPENDIDO"
+						},
+						{
+							"key": "locacion",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/api/eventos/6",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/eventos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "870"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"366-7x3u/m/Nn9i4xFplJgvp7MVcPsE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 07:11:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"OBITUARY EN VALPARAISO\",\n        \"descripcion\": \"OBITUARY REGRESA A VALPARAISO, CHILE, PARA EL PRÓXIMO 2 DE SEPTIEMBRE 2022 EN EL HUEVO\",\n        \"locacion\": 1,\n        \"estado\": \"REALIZADO\"\n    },\n    {\n        \"id\": 1,\n        \"titulo\": \"SABBAT III\",\n        \"descripcion\": \"CONNUCTIONE INCESTA Prods\\r\\nPresenta \\\"SABBAT III\\\"\\r\\nEste Sábado 27 de Agosto 2022\\r\\n16:00 Hrs\\r\\nEntrada General $6.000.-\\r\\nLugar: Espacio Good / Los Boldos # 78 B\\r\\nVILLA ALEMANA / QUINTA REGIÓN.\\r\\n\\r\\nOrden Presentaciones de las Bandas:\\r\\n•GOAT INVOKATION (Black/Death Metal Stgo)\\r\\n•MERCYTHRONE\\r\\n•AQUER\\r\\n•OSCULUM INFAME (Black/Death Metal Brasil)\\r\\n•BUNKER\",\n        \"locacion\": 1,\n        \"estado\": \"SUSPENDIDO\"\n    }\n]"
+				},
+				{
+					"name": "EVENTOS GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/eventos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6643"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19f3-CEol+sle6FekcyLOAkKAJQ3yPEc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 03:04:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 9,\n        \"titulo\": \"ANTIMATERIA\",\n        \"descripcion\": \"asdasd\",\n        \"descripcion_2\": \"Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por 'Luxul', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de 'Bleed' y 'Mass Suicide', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!\",\n        \"locacion\": 5,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 8,\n        \"titulo\": \"ANTIMATERIA\",\n        \"descripcion\": \"asdasd\",\n        \"descripcion_2\": \"Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por 'Luxul', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de 'Bleed' y 'Mass Suicide', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!\",\n        \"locacion\": 5,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 7,\n        \"titulo\": \"Curauma Fest II\\r\\n\",\n        \"descripcion\": \"Rock y emprendimiento junto al lago\\r\\nCervecerías artesanales, música en vivo patio de comida y emprendedores.\",\n        \"descripcion_2\": \"¡Rock y emprendimiento junto al lago es un evento que simplemente no puedes perderte! Desde la música en vivo hasta las cervecerías artesanales y los emprendedores locales, este evento es una celebración del espíritu creativo y emprendedor que se respira en la comunidad.\\r\\n\\r\\nEl ambiente es simplemente genial, con bandas locales tocando rock y otros géneros musicales que te mantienen emocionado y con ganas de bailar toda la noche. Las cervecerías artesanales ofrecen algunas de las mejores cervezas que he probado, todas elaboradas con los ingredientes más frescos y con pasión por la elaboración artesanal. Cada sorbo es una explosión de sabor que te hace apreciar el arte de la cerveza.\\r\\n\\r\\nPero no solo se trata de música y cerveza. Los emprendedores locales también tienen un papel importante en el evento, ofreciendo productos y servicios únicos e innovadores. Desde joyas artesanales hasta ropa y accesorios, hay algo para todos en este evento.\\r\\n\\r\\nY si te gusta la comida, entonces estás en el lugar correcto. El patio de comida ofrece una amplia variedad de opciones, desde platos clásicos hasta opciones vegetarianas y veganas. Todos los platillos son preparados con ingredientes frescos y ofrecen una explosión de sabores que seguramente te dejarán satisfecho.\\r\\n\\r\\nEn resumen, Rock y emprendimiento junto al lago es una experiencia increíble que combina música en vivo, cervezas artesanales, comida deliciosa y emprendedores locales en un ambiente vibrante y divertido. Si quieres sumergirte en la cultura creativa y emprendedora de la comunidad, este evento es definitivamente para ti. ¡No te lo pierdas!\",\n        \"locacion\": 3,\n        \"estado\": \"ACTIVO\"\n    },\n    {\n        \"id\": 6,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": \"Fiesta de los emprendedores\",\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 5,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 4,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 3,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"OBITUARY EN VALPARAISO\",\n        \"descripcion\": \"OBITUARY REGRESA A VALPARAISO, CHILE, PARA EL PRÓXIMO 2 DE SEPTIEMBRE 2022 EN EL HUEVO\",\n        \"descripcion_2\": null,\n        \"locacion\": 1,\n        \"estado\": \"FINALIZADO\"\n    },\n    {\n        \"id\": 1,\n        \"titulo\": \"SABBAT III\",\n        \"descripcion\": \"CONNUCTIONE INCESTA Prods\\r\\nPresenta \\\"SABBAT III\\\"\\r\\nEste Sábado 27 de Agosto 2022\\r\\n16:00 Hrs\\r\\nEntrada General $6.000.-\\r\\nLugar: Espacio Good / Los Boldos # 78 B\\r\\nVILLA ALEMANA / QUINTA REGIÓN.\\r\\n\\r\\nOrden Presentaciones de las Bandas:\\r\\n•GOAT INVOKATION (Black/Death Metal Stgo)\\r\\n•MERCYTHRONE\\r\\n•AQUER\\r\\n•OSCULUM INFAME (Black/Death Metal Brasil)\\r\\n•BUNKER\",\n        \"descripcion_2\": null,\n        \"locacion\": 1,\n        \"estado\": \"SUSPENDIDO\"\n    }\n]"
+				},
+				{
+					"name": "EVENTOS GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/eventos?estado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6636"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19ec-ndqnQ8snOkGYsiB38st/U3TPDvg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 05:20:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"titulo\": \"SABBAT III\",\n        \"descripcion\": \"CONNUCTIONE INCESTA Prods\\r\\nPresenta \\\"SABBAT III\\\"\\r\\nEste Sábado 27 de Agosto 2022\\r\\n16:00 Hrs\\r\\nEntrada General $6.000.-\\r\\nLugar: Espacio Good / Los Boldos # 78 B\\r\\nVILLA ALEMANA / QUINTA REGIÓN.\\r\\n\\r\\nOrden Presentaciones de las Bandas:\\r\\n•GOAT INVOKATION (Black/Death Metal Stgo)\\r\\n•MERCYTHRONE\\r\\n•AQUER\\r\\n•OSCULUM INFAME (Black/Death Metal Brasil)\\r\\n•BUNKER\",\n        \"descripcion_2\": null,\n        \"locacion\": 1,\n        \"estado\": \"SUSPENDIDO\"\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"OBITUARY EN VALPARAISO\",\n        \"descripcion\": \"OBITUARY REGRESA A VALPARAISO, CHILE, PARA EL PRÓXIMO 2 DE SEPTIEMBRE 2022 EN EL HUEVO\",\n        \"descripcion_2\": null,\n        \"locacion\": 1,\n        \"estado\": \"FINALIZADO\"\n    },\n    {\n        \"id\": 3,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 4,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 5,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 6,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": \"Fiesta de los emprendedores\",\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 7,\n        \"titulo\": \"Curauma Fest\",\n        \"descripcion\": \"Rock y emprendimiento junto al lago\\r\\nCervecerías artesanales, música en vivo patio de comida y emprendedores.\",\n        \"descripcion_2\": \"¡Rock y emprendimiento junto al lago es un evento que simplemente no puedes perderte! Desde la música en vivo hasta las cervecerías artesanales y los emprendedores locales, este evento es una celebración del espíritu creativo y emprendedor que se respira en la comunidad.\\r\\n\\r\\nEl ambiente es simplemente genial, con bandas locales tocando rock y otros géneros musicales que te mantienen emocionado y con ganas de bailar toda la noche. Las cervecerías artesanales ofrecen algunas de las mejores cervezas que he probado, todas elaboradas con los ingredientes más frescos y con pasión por la elaboración artesanal. Cada sorbo es una explosión de sabor que te hace apreciar el arte de la cerveza.\\r\\n\\r\\nPero no solo se trata de música y cerveza. Los emprendedores locales también tienen un papel importante en el evento, ofreciendo productos y servicios únicos e innovadores. Desde joyas artesanales hasta ropa y accesorios, hay algo para todos en este evento.\\r\\n\\r\\nY si te gusta la comida, entonces estás en el lugar correcto. El patio de comida ofrece una amplia variedad de opciones, desde platos clásicos hasta opciones vegetarianas y veganas. Todos los platillos son preparados con ingredientes frescos y ofrecen una explosión de sabores que seguramente te dejarán satisfecho.\\r\\n\\r\\nEn resumen, Rock y emprendimiento junto al lago es una experiencia increíble que combina música en vivo, cervezas artesanales, comida deliciosa y emprendedores locales en un ambiente vibrante y divertido. Si quieres sumergirte en la cultura creativa y emprendedora de la comunidad, este evento es definitivamente para ti. ¡No te lo pierdas!\",\n        \"locacion\": 3,\n        \"estado\": \"ACTIVO\"\n    },\n    {\n        \"id\": 8,\n        \"titulo\": \"ANTIMATERIA\",\n        \"descripcion\": \"asdasd\",\n        \"descripcion_2\": \"Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por 'Luxul', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de 'Bleed' y 'Mass Suicide', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!\",\n        \"locacion\": 5,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 9,\n        \"titulo\": \"ANTIMATERIA\",\n        \"descripcion\": \"asdasd\",\n        \"descripcion_2\": \"Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por 'Luxul', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de 'Bleed' y 'Mass Suicide', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!\",\n        \"locacion\": 5,\n        \"estado\": \"CREADO\"\n    }\n]"
+				},
+				{
+					"name": "EVENTOS GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/eventos?estado=CREADO",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "CREADO"
+								},
+								{
+									"key": "locacion",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3953"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f71-oKLnLRQJJ961wWRW7i7E/Ko0nxE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 05:19:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 4,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 5,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": null,\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 6,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"descripcion_2\": \"Fiesta de los emprendedores\",\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 8,\n        \"titulo\": \"ANTIMATERIA\",\n        \"descripcion\": \"asdasd\",\n        \"descripcion_2\": \"Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por 'Luxul', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de 'Bleed' y 'Mass Suicide', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!\",\n        \"locacion\": 5,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 9,\n        \"titulo\": \"ANTIMATERIA\",\n        \"descripcion\": \"asdasd\",\n        \"descripcion_2\": \"Si eres un amante del metal y te encuentras en la ciudad de Paine, no te puedes perder el evento de bandas musicales que se llevará a cabo próximamente. El cartel está encabezado por 'Luxul', una banda con un estilo Avant Garde que no te dejará indiferente, y acompañados de 'Bleed' y 'Mass Suicide', dos bandas que han creado una gran expectativa en la escena musical.Además, el evento contará con otras bandas invitadas y por confirmar, lo que asegura una noche llena de energía y talento. Pero no solo la música será la protagonista de la noche, ya que el evento también ofrecerá camping, comida, piscina y una feria de música, desde las 12 horas, para que puedas disfrutar de una experiencia completa. La organización ha sido impecable, con un equipo de staff muy amable y atento que te hará sentir como en casa. La producción y el sonido también están a la altura de lo que se espera en un evento de esta categoría, asegurando una calidad de sonido excelente para que puedas disfrutar al máximo de la música. La ciudad de Paine es el lugar perfecto para este evento, ya que su atmósfera relajada y natural crea un ambiente único que sin duda será una experiencia inolvidable para todos los asistentes. En resumen, si eres un fanático del metal y quieres disfrutar de una noche llena de buena música, diversión y relajación, el evento de bandas musicales en la ciudad de Paine es una oportunidad que no puedes dejar pasar. ¡Te esperamos!\",\n        \"locacion\": 5,\n        \"estado\": \"CREADO\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "EVENTOS GET ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/eventos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eventos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/api/eventos/6",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/eventos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "870"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"366-7x3u/m/Nn9i4xFplJgvp7MVcPsE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 07:11:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"titulo\": \"Outlander Fest\",\n        \"descripcion\": \"Fiesta de los emprendedores\",\n        \"locacion\": 3,\n        \"estado\": \"CREADO\"\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"OBITUARY EN VALPARAISO\",\n        \"descripcion\": \"OBITUARY REGRESA A VALPARAISO, CHILE, PARA EL PRÓXIMO 2 DE SEPTIEMBRE 2022 EN EL HUEVO\",\n        \"locacion\": 1,\n        \"estado\": \"REALIZADO\"\n    },\n    {\n        \"id\": 1,\n        \"titulo\": \"SABBAT III\",\n        \"descripcion\": \"CONNUCTIONE INCESTA Prods\\r\\nPresenta \\\"SABBAT III\\\"\\r\\nEste Sábado 27 de Agosto 2022\\r\\n16:00 Hrs\\r\\nEntrada General $6.000.-\\r\\nLugar: Espacio Good / Los Boldos # 78 B\\r\\nVILLA ALEMANA / QUINTA REGIÓN.\\r\\n\\r\\nOrden Presentaciones de las Bandas:\\r\\n•GOAT INVOKATION (Black/Death Metal Stgo)\\r\\n•MERCYTHRONE\\r\\n•AQUER\\r\\n•OSCULUM INFAME (Black/Death Metal Brasil)\\r\\n•BUNKER\",\n        \"locacion\": 1,\n        \"estado\": \"SUSPENDIDO\"\n    }\n]"
+				},
+				{
+					"name": "EVENTOS GET ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/eventos/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1895"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"767-tctDrAdbbn6pn8ESmGdV7Z9rfxI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 03:04:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"titulo\": \"Curauma Fest II\\r\\n\",\n    \"descripcion\": \"Rock y emprendimiento junto al lago\\r\\nCervecerías artesanales, música en vivo patio de comida y emprendedores.\",\n    \"descripcion_2\": \"¡Rock y emprendimiento junto al lago es un evento que simplemente no puedes perderte! Desde la música en vivo hasta las cervecerías artesanales y los emprendedores locales, este evento es una celebración del espíritu creativo y emprendedor que se respira en la comunidad.\\r\\n\\r\\nEl ambiente es simplemente genial, con bandas locales tocando rock y otros géneros musicales que te mantienen emocionado y con ganas de bailar toda la noche. Las cervecerías artesanales ofrecen algunas de las mejores cervezas que he probado, todas elaboradas con los ingredientes más frescos y con pasión por la elaboración artesanal. Cada sorbo es una explosión de sabor que te hace apreciar el arte de la cerveza.\\r\\n\\r\\nPero no solo se trata de música y cerveza. Los emprendedores locales también tienen un papel importante en el evento, ofreciendo productos y servicios únicos e innovadores. Desde joyas artesanales hasta ropa y accesorios, hay algo para todos en este evento.\\r\\n\\r\\nY si te gusta la comida, entonces estás en el lugar correcto. El patio de comida ofrece una amplia variedad de opciones, desde platos clásicos hasta opciones vegetarianas y veganas. Todos los platillos son preparados con ingredientes frescos y ofrecen una explosión de sabores que seguramente te dejarán satisfecho.\\r\\n\\r\\nEn resumen, Rock y emprendimiento junto al lago es una experiencia increíble que combina música en vivo, cervezas artesanales, comida deliciosa y emprendedores locales en un ambiente vibrante y divertido. Si quieres sumergirte en la cultura creativa y emprendedora de la comunidad, este evento es definitivamente para ti. ¡No te lo pierdas!\",\n    \"locacion\": 3,\n    \"estado\": \"ACTIVO\"\n}"
+				}
+			]
+		},
+		{
+			"name": "EVENTO CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/eventos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eventos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"titulo\": \"Outlander Fest\",\r\n        \"descripcion\": \"Fiesta de los emprendedores\",\r\n        \"locacion\": 3,\r\n        \"estado\": \"CREADO\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/eventos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-ID4cCM+uePsf9aI59g2irq4rCKI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 07:22:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"eventos Saved\",\n    \"status\": \"OK\",\n    \"id\": 7\n}"
+				}
+			]
+		},
+		{
+			"name": "EVENTO UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Outlander Fest\",\r\n    \"descripcion\": \"Fiesta de los emprendedores\",\r\n    \"descripcion_2\": \"Fiesta de los vgnfvgh cghc gfhdfghdthc fgbndftfcgbdt\",\r\n    \"locacion\": 3,\r\n    \"estado\": \"CREADO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/eventos/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eventos",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UPDATE EVENTO",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Outlander Fest\",\r\n    \"descripcion\": \"Fiesta de los emprendedores\",\r\n    \"descripcion_2\": \"Fiesta de los emprendedores\",\r\n    \"locacion\": 3,\r\n    \"estado\": \"CREADO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/eventos/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos",
+								"6"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-vP8ZZnIqgKAh+lITN804Vv/zS24\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 01:55:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "LOCACIONES GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/locaciones/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"locaciones",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LOCACIONES GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/locaciones/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"locaciones",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "386"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"182-dC0gMAXRP7OrinwdqNS0dj2jOKg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 05:39:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"El Huevo\",\n        \"comuna\": 65,\n        \"direccion\": \"Blanco 1386, Valparaíso\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Teatro Municipal de Valparaíso\",\n        \"comuna\": 65,\n        \"direccion\": \"Uruguay 410, Valparaíso\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Trotamundos\",\n        \"comuna\": 79,\n        \"direccion\": \"Aníbal Pinto 879, Quilpué, Valparaiso, Valparaíso\"\n    }\n]"
+				},
+				{
+					"name": "LOCACIONES GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/locaciones/?comuna=65",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"locaciones",
+								""
+							],
+							"query": [
+								{
+									"key": "comuna",
+									"value": "65"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "245"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f5-neYbQloB1L1wka7Aa55q6L4owUI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 05:43:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"El Huevo\",\n        \"comuna\": 65,\n        \"direccion\": \"Blanco 1386, Valparaíso\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Teatro Municipal de Valparaíso\",\n        \"comuna\": 65,\n        \"direccion\": \"Uruguay 410, Valparaíso\"\n    }\n]"
+				},
+				{
+					"name": "LOCACIONES GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/locaciones/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"locaciones",
+								""
+							],
+							"query": [
+								{
+									"key": "comuna",
+									"value": "65",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "519"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"207-Sa7OzBXrOaTeRJ2oA3acGlzMXpk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 05:52:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"El Huevo\",\n        \"comuna\": 65,\n        \"direccion\": \"Blanco 1386, Valparaíso\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Teatro Municipal de Valparaíso\",\n        \"comuna\": 65,\n        \"direccion\": \"Uruguay 410, Valparaíso\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Trotamundos\",\n        \"comuna\": 79,\n        \"direccion\": \"Aníbal Pinto 879, Quilpué, Valparaiso, Valparaíso\"\n    },\n    {\n        \"id\": 4,\n        \"nombre\": \"Teatro Municipal de Valparaíso\",\n        \"comuna\": 65,\n        \"direccion\": \"Uruguay 410, Valparaíso\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "LOCACIONES GET ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/locaciones/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"locaciones",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LOCACIONES GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/locaciones/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"locaciones",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "386"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"182-dC0gMAXRP7OrinwdqNS0dj2jOKg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 05:39:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"El Huevo\",\n        \"comuna\": 65,\n        \"direccion\": \"Blanco 1386, Valparaíso\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Teatro Municipal de Valparaíso\",\n        \"comuna\": 65,\n        \"direccion\": \"Uruguay 410, Valparaíso\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Trotamundos\",\n        \"comuna\": 79,\n        \"direccion\": \"Aníbal Pinto 879, Quilpué, Valparaiso, Valparaíso\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "LOCACIONES CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Teatro Municipal de Valparaíso\",\r\n    \"comuna\": 65,\r\n    \"direccion\": \"Uruguay 410, Valparaíso\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/locaciones/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"locaciones",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LOCACIONES GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/locaciones/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"locaciones",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "386"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"182-dC0gMAXRP7OrinwdqNS0dj2jOKg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 05:39:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"El Huevo\",\n        \"comuna\": 65,\n        \"direccion\": \"Blanco 1386, Valparaíso\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Teatro Municipal de Valparaíso\",\n        \"comuna\": 65,\n        \"direccion\": \"Uruguay 410, Valparaíso\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Trotamundos\",\n        \"comuna\": 79,\n        \"direccion\": \"Aníbal Pinto 879, Quilpué, Valparaiso, Valparaíso\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "LOCACIONES UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Casa Arebol\",\r\n    \"comuna\":65,\r\n    \"direccion\":\"Av.Los Placeres s/n ,Valparaiso\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/locaciones/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"locaciones",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UPDATE EVENTO",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Outlander Fest\",\r\n    \"descripcion\": \"Fiesta de los emprendedores\",\r\n    \"descripcion_2\": \"Fiesta de los emprendedores\",\r\n    \"locacion\": 3,\r\n    \"estado\": \"CREADO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/eventos/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eventos",
+								"6"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-vP8ZZnIqgKAh+lITN804Vv/zS24\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 01:55:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "REGIONES GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/regiones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"regiones"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/api/test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"test"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "523"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20b-wTcOMY2Kn0O1zQaLKOoHuhrtOG8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 06:58:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"webapi\": \"JUMPQ\",\n        \"description\": \"Saltate la fila, de manera simple, rápida e integrada a su plataforma.\",\n        \"prologue\": \"FUNCIONES DE JUMPQ\",\n        \"readme\": \"Aviso de Agendamiento por SMS, Whatsapp o Correo. Interfaces con Calendarios y Agendamientos.Visualizador para administrador de gestión de agendamiento de sucursales y agentes. Acceso a información de clientes que han agendado. Validación in-situ de agendamiento en sucursales. Personalización para cada cliente.\",\n        \"version\": \"1.0.0\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "REGIONES GET ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/regiones/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"regiones",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/api/test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"test"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "523"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20b-wTcOMY2Kn0O1zQaLKOoHuhrtOG8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 06:58:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"webapi\": \"JUMPQ\",\n        \"description\": \"Saltate la fila, de manera simple, rápida e integrada a su plataforma.\",\n        \"prologue\": \"FUNCIONES DE JUMPQ\",\n        \"readme\": \"Aviso de Agendamiento por SMS, Whatsapp o Correo. Interfaces con Calendarios y Agendamientos.Visualizador para administrador de gestión de agendamiento de sucursales y agentes. Acceso a información de clientes que han agendado. Validación in-situ de agendamiento en sucursales. Personalización para cada cliente.\",\n        \"version\": \"1.0.0\"\n    }\n]"
+				},
+				{
+					"name": "REGIONES GET ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/regiones/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"regiones",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5a-hNQugjcbp/8t4RwBnFuCNohX/A0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 07:21:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"region\": \"Valparaiso\",\n    \"abreviatura\": \"VA\",\n    \"capital\": \"valparaíso\"\n}"
+				}
+			]
+		},
+		{
+			"name": "PROVINCIAS GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PROVINCIAS GET ALL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/provincias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"provincias"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4053"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fd5-p+Y2d3cQT1B3tMd1ht9DbZ+x2xo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 07:37:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"provincia\": \"Arica\",\n        \"region_id\": 1\n    },\n    {\n        \"id\": 2,\n        \"provincia\": \"Parinacota\",\n        \"region_id\": 1\n    },\n    {\n        \"id\": 3,\n        \"provincia\": \"Iquique\",\n        \"region_id\": 2\n    },\n    {\n        \"id\": 4,\n        \"provincia\": \"El Tamarugal\",\n        \"region_id\": 2\n    },\n    {\n        \"id\": 5,\n        \"provincia\": \"Tocopilla\",\n        \"region_id\": 3\n    },\n    {\n        \"id\": 6,\n        \"provincia\": \"El Loa\",\n        \"region_id\": 3\n    },\n    {\n        \"id\": 7,\n        \"provincia\": \"Antofagasta\",\n        \"region_id\": 3\n    },\n    {\n        \"id\": 8,\n        \"provincia\": \"Chañaral\",\n        \"region_id\": 4\n    },\n    {\n        \"id\": 9,\n        \"provincia\": \"Copiapó\",\n        \"region_id\": 4\n    },\n    {\n        \"id\": 10,\n        \"provincia\": \"Huasco\",\n        \"region_id\": 4\n    },\n    {\n        \"id\": 11,\n        \"provincia\": \"Elqui\",\n        \"region_id\": 5\n    },\n    {\n        \"id\": 12,\n        \"provincia\": \"Limarí\",\n        \"region_id\": 5\n    },\n    {\n        \"id\": 13,\n        \"provincia\": \"Choapa\",\n        \"region_id\": 5\n    },\n    {\n        \"id\": 14,\n        \"provincia\": \"Petorca\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 15,\n        \"provincia\": \"Los Andes\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 16,\n        \"provincia\": \"San Felipe de Aconcagua\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 17,\n        \"provincia\": \"Quillota\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 18,\n        \"provincia\": \"Valparaiso\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 19,\n        \"provincia\": \"San Antonio\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 20,\n        \"provincia\": \"Isla de Pascua\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 21,\n        \"provincia\": \"Marga Marga\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 22,\n        \"provincia\": \"Chacabuco\",\n        \"region_id\": 7\n    },\n    {\n        \"id\": 23,\n        \"provincia\": \"Santiago\",\n        \"region_id\": 7\n    },\n    {\n        \"id\": 24,\n        \"provincia\": \"Cordillera\",\n        \"region_id\": 7\n    },\n    {\n        \"id\": 25,\n        \"provincia\": \"Maipo\",\n        \"region_id\": 7\n    },\n    {\n        \"id\": 26,\n        \"provincia\": \"Melipilla\",\n        \"region_id\": 7\n    },\n    {\n        \"id\": 27,\n        \"provincia\": \"Talagante\",\n        \"region_id\": 7\n    },\n    {\n        \"id\": 28,\n        \"provincia\": \"Cachapoal\",\n        \"region_id\": 8\n    },\n    {\n        \"id\": 29,\n        \"provincia\": \"Colchagua\",\n        \"region_id\": 8\n    },\n    {\n        \"id\": 30,\n        \"provincia\": \"Cardenal Caro\",\n        \"region_id\": 8\n    },\n    {\n        \"id\": 31,\n        \"provincia\": \"Curicó\",\n        \"region_id\": 9\n    },\n    {\n        \"id\": 32,\n        \"provincia\": \"Talca\",\n        \"region_id\": 9\n    },\n    {\n        \"id\": 33,\n        \"provincia\": \"Linares\",\n        \"region_id\": 9\n    },\n    {\n        \"id\": 34,\n        \"provincia\": \"Cauquenes\",\n        \"region_id\": 9\n    },\n    {\n        \"id\": 35,\n        \"provincia\": \"Diguillín\",\n        \"region_id\": 10\n    },\n    {\n        \"id\": 36,\n        \"provincia\": \"Itata\",\n        \"region_id\": 10\n    },\n    {\n        \"id\": 37,\n        \"provincia\": \"Punilla\",\n        \"region_id\": 10\n    },\n    {\n        \"id\": 38,\n        \"provincia\": \"Bio Bío\",\n        \"region_id\": 11\n    },\n    {\n        \"id\": 39,\n        \"provincia\": \"Concepción\",\n        \"region_id\": 11\n    },\n    {\n        \"id\": 40,\n        \"provincia\": \"Arauco\",\n        \"region_id\": 11\n    },\n    {\n        \"id\": 41,\n        \"provincia\": \"Malleco\",\n        \"region_id\": 12\n    },\n    {\n        \"id\": 42,\n        \"provincia\": \"Cautín\",\n        \"region_id\": 12\n    },\n    {\n        \"id\": 43,\n        \"provincia\": \"Valdivia\",\n        \"region_id\": 13\n    },\n    {\n        \"id\": 44,\n        \"provincia\": \"Ranco\",\n        \"region_id\": 13\n    },\n    {\n        \"id\": 45,\n        \"provincia\": \"Osorno\",\n        \"region_id\": 14\n    },\n    {\n        \"id\": 46,\n        \"provincia\": \"Llanquihue\",\n        \"region_id\": 14\n    },\n    {\n        \"id\": 47,\n        \"provincia\": \"Chiloé\",\n        \"region_id\": 14\n    },\n    {\n        \"id\": 48,\n        \"provincia\": \"Palena\",\n        \"region_id\": 14\n    },\n    {\n        \"id\": 49,\n        \"provincia\": \"Coyhaique\",\n        \"region_id\": 15\n    },\n    {\n        \"id\": 50,\n        \"provincia\": \"Aysén\",\n        \"region_id\": 15\n    },\n    {\n        \"id\": 51,\n        \"provincia\": \"General Carrera\",\n        \"region_id\": 15\n    },\n    {\n        \"id\": 52,\n        \"provincia\": \"Capitán Prat\",\n        \"region_id\": 15\n    },\n    {\n        \"id\": 53,\n        \"provincia\": \"Última Esperanza\",\n        \"region_id\": 16\n    },\n    {\n        \"id\": 54,\n        \"provincia\": \"Magallanes\",\n        \"region_id\": 16\n    },\n    {\n        \"id\": 55,\n        \"provincia\": \"Tierra del Fuego\",\n        \"region_id\": 16\n    },\n    {\n        \"id\": 56,\n        \"provincia\": \"Antártica Chilena\",\n        \"region_id\": 16\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "PROVINCIAS GET ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/provincias/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"provincias",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PROVINCIAS GET ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/provincias/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"provincias",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-82w4irgo5LsaeCmtSiRrqWVssFU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 07:36:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"provincia\": \"Antofagasta\",\n    \"region_id\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "PROVINCIAS GET REGION ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/provincias/region/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"provincias",
+						"region",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PROVINCIAS GET REGION ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/provincias/region/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"provincias",
+								"region",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "PUT, POST, GET, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "599"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"257-mfAFXfAJbClzcU5awtxwl7PUAMw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 07:40:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 14,\n        \"provincia\": \"Petorca\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 15,\n        \"provincia\": \"Los Andes\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 16,\n        \"provincia\": \"San Felipe de Aconcagua\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 17,\n        \"provincia\": \"Quillota\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 18,\n        \"provincia\": \"Valparaiso\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 19,\n        \"provincia\": \"San Antonio\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 20,\n        \"provincia\": \"Isla de Pascua\",\n        \"region_id\": 6\n    },\n    {\n        \"id\": 21,\n        \"provincia\": \"Marga Marga\",\n        \"region_id\": 6\n    }\n]"
+				}
+			]
+		}
+	]
+}
