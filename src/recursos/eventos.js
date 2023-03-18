@@ -23,7 +23,6 @@ Eventos.get('/', (req, response) => {
         query = query.where('eventos.estado', estado)
     }
 
-    
     if (!(locacion == undefined || locacion == '')) {
         query = query.where('eventos.locacion', locacion)
     }
@@ -37,19 +36,6 @@ Eventos.get('/', (req, response) => {
             response.status(500).json(err)
         }
     });
-
-    /*
-    response.status(200).json(result.values)
-    var sqlSelectString = "SELECT * FROM eventos ORDER BY id DESC";
-
-    MySqlConnection.query(result.sql, (err, rows, fields) => {
-        if (!err) {
-            response.status(200).json(rows)
-        } else {
-            response.json(err)
-        }
-    });
-    */
 
 });
 
@@ -76,10 +62,30 @@ Eventos.post('/', (req, response) => {
         locacion
     } = req.body;
 
-    evento.titulo = titulo ? titulo : response.response.status(400).json({ status: "ERROR", message: "titulo is required" });
-    evento.descripcion = descripcion ? descripcion : response.response.status(400).json({ status: "ERROR", message: "descripcion is required" });;
-    evento.descripcion_2 = descripcion_2 ? descripcion_2 : response.response.status(400).json({ status: "ERROR", message: "descripcion_2 is required" });;
-    evento.locacion = locacion ? locacion : response.response.status(400).json({ status: "ERROR", message: "locacion is required" });
+    
+    if (!(titulo == undefined || titulo == '')) {
+        evento.titulo = titulo
+    } else {
+        response.status(400).json({ status: "ERROR", message: "titulo is required" })
+    }
+
+    if (!(descripcion == undefined || descripcion == '')) {
+        evento.descripcion = descripcion
+    } else {
+        response.status(400).json({ status: "ERROR", message: "descripcion is required" })
+    }
+
+    if (!(descripcion_2 == undefined || descripcion_2 == '')) {
+        evento.descripcion_2 = descripcion_2
+    } else {
+        response.status(400).json({ status: "ERROR", message: "descripcion_2 is required" })
+    }
+
+    if (!(locacion == undefined || locacion == '')) {
+        evento.locacion = locacion
+    } else {
+        response.status(400).json({ status: "ERROR", message: "locacion is required" })
+    }    
     evento.estado = "CREADO";
 
     var query = "INSERT INTO `eventos` (`titulo`, `descripcion`, `descripcion_2`,`locacion`, `estado`) VALUES ( ?, ?, ?, ?, ?)";
@@ -105,15 +111,42 @@ Eventos.put('/:id', (req, response) => {
     } = req.body;
 
     if (!id) {
+        
         response.status(400).json({ status: "ERROR", message: "id is required" })
         return;
-    } else {
-        evento.titulo = titulo ? titulo : response.response.status(400).json({ status: "ERROR", message: "titulo is required" });
-        evento.descripcion = descripcion ? descripcion : response.response.status(400).json({ status: "ERROR", message: "descripcion is required" });;
-        evento.descripcion_2 = descripcion_2 ? descripcion_2 : response.response.status(400).json({ status: "ERROR", message: "descripcion_2 is required" });;
-        evento.locacion = locacion ? locacion : response.response.status(400).json({ status: "ERROR", message: "locacion is required" });
-        evento.estado = estado ? estado : response.response.status(400).json({ status: "ERROR", message: "estado is required" });
 
+    } else {
+
+        if (!(titulo == undefined || titulo == '')) {
+            evento.titulo = titulo
+        } else {
+            response.status(400).json({ status: "ERROR", message: "titulo is required" })
+        }
+
+        if (!(descripcion == undefined || descripcion == '')) {
+            evento.descripcion = descripcion
+        } else {
+            response.status(400).json({ status: "ERROR", message: "descripcion is required" })
+        }
+
+        if (!(descripcion_2 == undefined || descripcion_2 == '')) {
+            evento.descripcion_2 = descripcion_2
+        } else {
+            response.status(400).json({ status: "ERROR", message: "descripcion_2 is required" })
+        }
+
+        if (!(locacion == undefined || locacion == '')) {
+            evento.locacion = locacion
+        } else {
+            response.status(400).json({ status: "ERROR", message: "locacion is required" })
+        }
+
+        if (!(estado == undefined || estado == '')) {
+            evento.estado = estado
+        } else {
+            response.status(400).json({ status: "ERROR", message: "estado is required" })
+        }
+        
         var query = "UPDATE `eventos` SET `titulo` = ?, `descripcion` = ?, `descripcion_2` = ?, `locacion` = ?, `estado` = ? WHERE `eventos`.`id` = ?";
 
         MySqlConnection.query(query, [

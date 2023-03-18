@@ -38,21 +38,11 @@ app.use(express.json());
 
 app.use('/api/test', require('./routes/index'));
 app.use('/api/eventos', require('./recursos/eventos'));
-app.use('/api/clients', require('./recursos/clients'));
-app.use('/api/regions', require('./recursos/regions'));
-app.use('/api/comunas', require('./recursos/comunas'));
-app.use('/api/branchs', require('./recursos/branchs'));
-app.use('/api/companies', require('./recursos/companies'));
-app.use('/api/branchSettings', require('./recursos/branchSettings'));
-
-
+app.use('/api/locaciones', require('./recursos/locaciones'));
 
 
 // starting the server
 app.listen(3000, () => {
-
     var port = app.get('port');
     console.log('node server at port:', port);
-    //console.log('Server at puerto ${3000}');
-
 })
