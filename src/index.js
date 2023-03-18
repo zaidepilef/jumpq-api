@@ -40,6 +40,9 @@ app.use('/api/test', require('./routes/index'));
 app.use('/api/eventos', require('./recursos/eventos'));
 app.use('/api/locaciones', require('./recursos/locaciones'));
 
+app.use('/api/comunas', require('./recursos/comunas'));
+app.use('/api/provincias', require('./recursos/provincias'));
+app.use('/api/regiones', require('./recursos/regiones'));
 
 // starting the server
 app.listen(3000, () => {

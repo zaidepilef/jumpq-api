@@ -1,10 +1,10 @@
 const { Router, request } = require('express');
 const MySqlConnection = require('../database');
-const Comunas = Router();
+const Provincias = Router();
 
 // GET ALL
-Comunas.get('/', (req, response) => {
-    var query = "SELECT * FROM `comunas` ORDER BY `id` ASC";
+Provincias.get('/', (req, response) => {
+    var query = "SELECT * FROM `provincias` ORDER BY `id` ASC";
     MySqlConnection.query(query, (err, rows, fields) => {
         if (!err) {
             response.status(200).json(rows)
@@ -15,9 +15,9 @@ Comunas.get('/', (req, response) => {
 });
 
 // GET ID
-Comunas.get('/:id', (req, response) => {
+Provincias.get('/:id', (req, response) => {
     const { id } = req.params;
-    var query = "SELECT * FROM `comunas` WHERE `id` = " + id;
+    var query = "SELECT * FROM `provincias` WHERE `id` = " + id;
     MySqlConnection.query(query, (err, rows, fields) => {
         if (!err) {
             response.status(200).json(rows[0])
@@ -27,10 +27,9 @@ Comunas.get('/:id', (req, response) => {
     });
 });
 
-// GET PROVINCIA ID
-Comunas.get('/provincia/:id', (req, response) => {
+Provincias.get('/region/:id', (req, response) => {
     const { id } = req.params;
-    var query = "SELECT * FROM `comunas` WHERE `provincia_id` = " + id;
+    var query = "SELECT * FROM `provincias` WHERE `region_id` = " + id;
     MySqlConnection.query(query, (err, rows, fields) => {
         if (!err) {
             response.status(200).json(rows)
@@ -40,4 +39,5 @@ Comunas.get('/provincia/:id', (req, response) => {
     });
 });
 
-module.exports = Comunas;
+
+module.exports = Provincias;

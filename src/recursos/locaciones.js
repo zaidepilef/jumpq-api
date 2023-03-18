@@ -41,7 +41,7 @@ Locaciones.get('/:id', (req, response) => {
         if (!err) {
             response.status(200).json(rows[0])
         } else {
-            response.status(500).json(err)
+            response.status(500).json({ status: "ERROR", message: err })
         }
     });
 });
@@ -127,8 +127,6 @@ Locaciones.put('/:id', (req, response) => {
             }
         });
     }
-
-
 
 });
 
